@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -30,6 +32,7 @@ public class Movement : MonoBehaviour
         if (collision != null)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("JustScene");
         }
     }
 }
