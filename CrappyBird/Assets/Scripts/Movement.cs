@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             Jump();
         }      
@@ -24,8 +20,9 @@ public class Movement : MonoBehaviour
     private void Jump()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector2.up);
+       {
+            rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+       }
     }
-
 }
 
