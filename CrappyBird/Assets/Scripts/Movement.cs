@@ -24,5 +24,13 @@ public class Movement : MonoBehaviour
             rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
        }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision != null)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
 
